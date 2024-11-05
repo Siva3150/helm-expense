@@ -1,5 +1,5 @@
 deployment:
- imageversion: stable-perl
+ imageversion: alpine
  replicas: 4
 service:
  port: 80
