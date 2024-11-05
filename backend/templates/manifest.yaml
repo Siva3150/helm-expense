@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
       - name: backend
-        image: siva3150/backend:{{ .Values.deployment.imageVersion}}
+        image: siva3150/backend:{{ .Values.deployment.imageVersion }}
         resources:
          requests:
            cpu: 100m
@@ -57,7 +57,7 @@ spec:
     tier: api
     project: expense
   ports:
-  - name: backend-port-port
+  - name: backend-port
     protocol: TCP
     port: 8080 # service port
     targetPort: 8080 # container port
@@ -75,4 +75,4 @@ spec:
    name: backend
  minReplicas: 1
  maxReplicas: 10
- targetCPUUtilizationPercentage: {{ .Values.deployment.cpuUtilization}} # usually 75 in real environment
+ targetCPUUtilizationPercentage: {{ .Values.hpa.cpuUtilization }} # usually 75 in real environment
