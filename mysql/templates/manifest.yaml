@@ -24,7 +24,7 @@ spec:
     spec:
       containers:
       - name: mysql
-        image: siva3150/mysql:{{ .Values.deployment.imageversion}}
+        image: siva3150/mysql:{{ .Values.deployment.imageVersion }}
 
 ---
 kind: Service
